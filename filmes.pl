@@ -1,4 +1,11 @@
-% filme(titulo, genero, classificacao, ano, nota)
+%  SISTEMA DE RECOMENDACAO DE FILMES EM PROLOG
+%  Disciplina: Logica para Ciencia da Computacao
+
+
+%  1. BASE DE CONHECIMENTO (FATOS)
+
+
+% filme(Titulo, Genero, Classificacao, Ano, Nota)
 filme(toy_story,animacao,0,1995,8.3).
 filme(shrek,animacao,0,2001,7.9).
 filme(matrix,ficcao,14,1999,8.7).
@@ -19,3 +26,17 @@ filme(como_treinar_seu_dragao,animacao,0,2010,8.1).
 filme(o_diabo_veste_prada,comedia,10,2006,6.9).
 filme(barbie,comedia,12,2023,6.8).
 filme(a_empregada,suspense,16,2025,6.7).
+
+
+% user (Nome, Idade)
+user(natalia,14).
+user(carol,16).
+user(fernanda,19).
+user(nathanni,13).
+user(sabrina,19).
+user(laura,15).
+user(luan,22).
+user(vitoria,11).
+user(guilherme,17).
+user(deyvison,8).
+
