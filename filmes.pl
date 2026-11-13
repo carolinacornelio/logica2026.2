@@ -40,3 +40,26 @@ user(vitoria,11).
 user(guilherme,17).
 user(deyvison,8).
 
+% gosta (Nome,GeneroFav)
+gosta(natalia,terror).
+gosta(natalia,animacao).
+gosta(carol,romance).
+gosta(carol,suspense).
+gosta(fernanda,aventura).
+gosta(fernanda,animacao).
+gosta(nathanni,suspense).
+gosta(nathanni,romance).
+gosta(sabrina,aventura).
+gosta(luan,ficcao).
+gosta(luan,acao).
+gosta(vitoria,comedia).
+gosta(guilherme,terror).
+gosta(guilherme,acao).
+gosta(deyvison,comedia).
+
+% assistiu (Nome, Filme) 
+assistiu(natalia,um lugar silencioso).
+assistiu(carol,about_time).
+assistiu(fernanda,de_volta_para_o_futuro).
+assistiu(guilherme,vingadores_ultimato).
+assistiu(luan,john_wick).
