@@ -73,3 +73,9 @@ recomendado(Pessoa, Filme) :-
   user(Pessoa, Idade),
   Idade >= Classificacao.
 
+% Regra 2: um filme eh classico se foi lancado antes de 2000
+classico(Filme) :-
+  filme(Filme, _, _, Ano, _),
+  Ano < 2000.
+
+
