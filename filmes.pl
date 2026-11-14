@@ -63,3 +63,13 @@ assistiu(carol,about_time).
 assistiu(fernanda,de_volta_para_o_futuro).
 assistiu(guilherme,vingadores_ultimato).
 assistiu(luan,john_wick).
+
+%  2. REGRAS LÓGICAS
+
+% Regra 1: recomenda um filme se a pessoa gosta do genero e tem idade pra ver
+recomendado(Pessoa, Filme) :-
+  gosta(Pessoa, Genero),
+  filme(Filme, Genero, Classificacao, _, _),
+  user(Pessoa, Idade),
+  Idade >= Classificacao.
+
