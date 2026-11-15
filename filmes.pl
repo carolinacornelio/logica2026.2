@@ -86,3 +86,9 @@ excelente(Filme) :-
 % Regra 4: um filme eh para familia se tiver classificacao livre 
 para_familia(Filme) :-
   filme(Filme, _, 0, _, _).
+
+% Regra 5: dois filmes sao parecidos se tiverem o mesmo genero
+parecidos(Filme1,Filme2) :-
+  filme(Filme1, Genero, _, _, _),
+  filme(Filme2, Genero, _, _, _),
+  Filme1 \= Filme2.
