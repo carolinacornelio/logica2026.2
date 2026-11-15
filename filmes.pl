@@ -78,4 +78,11 @@ classico(Filme) :-
   filme(Filme, _, _, Ano, _),
   Ano < 2000.
 
+% Regra 3: um filme eh excelente se essa nota for maior ou igual a 8 
+excelente(Filme) :-
+  filme(Filme, _, _, _, Nota),
+  Nota >= 8.
 
+% Regra 3: um filme eh para familia se tiver classificacao livre 
+para_familia(Filme) :-
+  filme(Filme, _, 0, _, _).
