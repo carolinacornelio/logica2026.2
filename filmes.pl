@@ -83,6 +83,6 @@ excelente(Filme) :-
   filme(Filme, _, _, _, Nota),
   Nota >= 8.
 
-% Regra 3: um filme eh para familia se tiver classificacao livre 
+% Regra 4: um filme eh para familia se tiver classificacao livre 
 para_familia(Filme) :-
   filme(Filme, _, 0, _, _).
