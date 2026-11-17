@@ -92,3 +92,20 @@ parecidos(Filme1,Filme2) :-
   filme(Filme1, Genero, _, _, _),
   filme(Filme2, Genero, _, _, _),
   Filme1 \= Filme2.
+
+% Regra 6: recomenda filmes excelentes se a pessoa gosta do genero e tem idade para ver
+recomendado_premium(Pessoa, Filme):-
+  recomendado(Pessoa, Filme),
+  excelente(Filme).
+
+% Regra 7: recomenda filmes que a pessoa gosta do genero, tem idade e nunca assistiu
+nao_visto(Pessoa, Filme) :-
+  recomendado(Pessoa, Filme),
+  \+ assistiu(Pessoa, Filme).
+
+% Regra 8: filme que duas pessoas podem ver juntas
+para_assistir_juntos(P1, P2, Filme) :-
+  recomendado(P1, Filme),
+  recomendado(P2, Filme),
+  P1 \= P2.
+
