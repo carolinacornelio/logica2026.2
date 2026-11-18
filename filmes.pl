@@ -109,3 +109,16 @@ para_assistir_juntos(P1, P2, Filme) :-
   recomendado(P2, Filme),
   P1 \= P2.
 
+%  3. PREDICADOS DE CONSULTA
+% Lista todas as recomendacoes novas de uma pessoa (gosta do genero, tem idade e ainda nao assistiu)
+lista_recomendacoes(Pessoa, Lista) :-
+  findall(Filme, nao_visto(Pessoa, Filme), Lista).
+
+% Lista todos os filmes de um genero
+filmes_do_genero(Genero, Lista) :-
+  findall(Filme, filme(Filme, Genero, _, _, _), Lista).
+
+% Conta quantos filmes existem em um genero
+quantos_filmes(Genero, Qtd) :-
+  filmes_do_genero(Genero, Lista),
+  length(Lista, Qtd).
