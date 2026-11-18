@@ -122,3 +122,14 @@ filmes_do_genero(Genero, Lista) :-
 quantos_filmes(Genero, Qtd) :-
   filmes_do_genero(Genero, Lista),
   length(Lista, Qtd).
+
+% Lista todos os filmes classicos (lancados antes de 2000)
+filmes_classicos(Lista) :-
+  findall(Filme, classico(Filme), Lista). 
+
+% Lista os pares de pessoas que podem assistir a um filme juntas
+pares_para_assistir(Filme, Pares) :- 
+  findall(P1-P2,
+         (para_assistir_juntos(P1, P2 Filme), P1 @< P2),
+         Pares).
+  
