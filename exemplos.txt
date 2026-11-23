@@ -1,0 +1,36 @@
+CONSULTAS - SISTEMA DE RECOMENDACAO DE FILMES
+
+____________________PARTE 1 - FATOS____________________
+
+1 - Quais generos Natalia gosta?
+gosta(natalia, G).
+respostas: terror ; animacao
+
+2 - Quem gosta de aventura?
+gosta(P, aventura).
+respostas: fernanda ; sabrina
+
+3 - Quem gosta de suspense?
+gosta(P, suspense).
+respostas: carol ; nathanni
+
+4 - Laura ja assistiu Matrix?
+assistiu(laura, matrix).
+resposta: false
+
+5 - Quem ja assistiu De Volta para o Futuro?
+assistiu(P, de_volta_para_o_futuro).
+resposta: P = fernanda
+
+6 - O que Carol ja assistiu?
+assistiu(carol, F).
+resposta: F = about_time
+
+7 - Qual a idade de Nathanni?
+user(nathanni, Idade).
+resposta: Idade = 13
+
+8 - Quais sao os dados do filme Matrix?
+filme(matrix, G, C, A, N).
+resposta: G = ficcao, C = 14, A = 1999, N = 8.7
+
