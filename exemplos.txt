@@ -93,3 +93,54 @@ ____________________PARTE 2 - REGRAS____________________
     respostas: toy_story; shrek; la_la_land; de_volta_para_o_futuro; nanny_mcphee; como_treinar_seu_dragao
 
 
+--- REGRA 5: filmes parecidos (mesmo genero e filmes diferentes)
+
+5.1 Toy Story e Shrek sao parecidos?
+    parecidos(toy_story, shrek).
+    resposta: true
+
+5.2 Verity e Matrix sao parecidos?
+    parecidos(verity, matrix).
+    resposta: false
+
+5.3 Quais filmes sao parecidos com Interestelar?
+    parecidos(interestelar, F).
+    respostas: matrix ; jogos_vorazes
+
+--- REGRA 6: recomendado_premium(recomendado e excelente)
+
+6.1 Filmes premium para Luan
+    recomendado_premium(luan, F).
+    respostas: matrix ; interestelar ; vingadores_ultimato
+
+6.2 Vitoria so gosta de comedia e nenhuma comedia da base tem nota >= 8
+    recomendado_premium(vitoria, F).
+    resposta: false
+
+--- REGRA 7: nao_visto(recomendado e ainda nao assistiu)
+
+7.1 recomendado inclui o filme que Fernanda ja viu
+    recomendado(fernanda, F).
+    respostas: de_volta_para_o_futuro ; toy_story ; shrek ; como_treinar_seu_dragao
+
+7.2 nao_visto tira De Volta para o Futuro, que ela ja assistiu
+    nao_visto(fernanda, F).
+    respostas: toy_story ; shrek ; como_treinar_seu_dragao
+
+7.3 Guilherme ja viu Vingadores, entao ele sai da lista
+    nao_visto(guilherme, F).
+    respostas: um_lugar_silencioso ; panico ; john_wick
+
+--- REGRA 8: para_assistir_juntos(os dois sao recomendados para o mesmo filme)
+
+8.1 o que Luan e Guilherme podem ver juntos?
+    para_assistir_juntos(luan, guilherme, F).
+    respostas: vingadores_ultimato ; john_wick
+
+8.2 O que Deyvison e Vitoria podem ver juntos?
+    para_assistir_juntos(deyvison, vitoria, F).
+    resposta: F = nanny_mcphee
+
+8.3 Natalia e Deyvison nao tem filme em comum
+    para_assistir_juntos(natalia, deyvison, F).
+    resposta: false
