@@ -34,3 +34,62 @@ resposta: Idade = 13
 filme(matrix, G, C, A, N).
 resposta: G = ficcao, C = 14, A = 1999, N = 8.7
 
+____________________PARTE 2 - REGRAS____________________
+
+---REGRA 1: gosta do genero E tem idade para ver
+
+1.1 O que o Guilherme (17 anos) pode ver e gosta?
+    recomendado(guilherme, F).
+    respostas: um_lugar_silencioso ; panico ; vingadores_ultimato ; john_wick
+
+1.2 Panico (16 anos) pode ser recomendado para Deyvison (8 anos)?
+    recomendado(deyvison, panico).
+    resposta: false
+
+1.3 Para quem Nanny McPhee pode ser recomendado?
+    recomendado(P, nanny_mcphee).
+    respostas: vitoria ; deyvison ; laura
+
+--- REGRA 2: clássico (lancado antes de 2000)
+
+2.1 Panico eh classico?
+    classico(panico).
+    resposta: true
+
+2.2 Barbie eh classico?
+    classico(barbie).
+    resposta: false
+
+2.3 Quais sao os classicos?
+    classico(F).
+    respostas: toy_story ; matrix ; de_volta_para_o_futuro ; panico
+
+--- REGRA 3: filmes excelentes (nota maior ou igual a 8)
+
+3.1 Interestelar eh excelente?
+    excelente(interestelar).
+    resposta: true
+
+3.2 Barbie eh excelente?
+    excelente(barbie).
+    resposta: false
+
+3.3 Quais sao os excelentes?
+    excelente(F).
+    respostas: toy_story; matrix; interestelar; vingadores_ultimato; la_la_land; de_volta_para_o_futuro; como_treinar_seu_dragao
+
+--- REGRA 4: para familia (classificacao livre)
+
+4.1 Shrek eh para a familia?
+    para_familia(shrek).
+    resposta: true
+
+4.2 Panico eh para a familia?
+    para_familia(panico).
+    resposta: false
+
+4.3 Quais filmes sao para a familia?
+    para_familia(F).
+    respostas: toy_story; shrek; la_la_land; de_volta_para_o_futuro; nanny_mcphee; como_treinar_seu_dragao
+
+
